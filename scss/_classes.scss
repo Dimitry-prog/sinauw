@@ -1,0 +1,149 @@
+.classes {
+  &__title {
+    margin: 0;
+    font-size: 36px;
+    line-height: 54px;
+    color: $titleColor;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  &__subtitle {
+    margin: 0;
+    font-size: 18px;
+    line-height: 27px;
+    color: $descriptionText;
+    margin-bottom: 85px;
+    text-align: center;
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(263px, 1fr));
+    gap: 30px;
+  }
+  &__card {
+    background: $classesCardBackgroundColor;
+    border-radius: 20px;
+    padding: 12px 12px 0;
+    position: relative;
+    border: 3px solid rgba(50, 52, 101, .4);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: .3s;
+    &:hover {
+      transition: .3s;
+      .classes__teacher-button {
+        right: 0;
+      }
+    }
+  }
+  &__header {
+    position: relative;
+    margin-bottom: 25px;
+  }
+  &__img {
+    width: 100%;
+  }
+  &__count {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #FFFFFF;
+    padding: 6px 16px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+  }
+  &__type {
+    margin: 0;
+    font-weight: $fw500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $typeColor;
+    margin-bottom: 10px;
+  }
+  &__card-title {
+    margin: 0;
+    font-weight: $fw600;
+    font-size: 18px;
+    line-height: 27px;
+    color: $titleColor;
+    margin-bottom: 15px;
+  }
+  &__description {
+    margin: 0;
+    line-height: 21px;
+    color: $descriptionText;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #292B56;
+    flex: 1 1 auto;
+  }
+  &__teacher {
+    position: relative;
+    display: grid;
+    grid-template-columns: 40px 88px 1fr;
+    align-items: center;
+    align-content: center;
+    column-gap: 15px;
+    padding: 30px 0;
+    overflow: hidden;
+  }
+  &__mentor {
+    grid-column: 1;
+    justify-self: start;
+  }
+  &__name {
+    grid-column: 2;
+    margin: 0;
+    font-weight: $fw500;
+    line-height: 21px;
+    color: $titleColor;
+    grid-row: 1;
+    grid-column: 2;
+    align-self: start;
+  }
+  &__role {
+    grid-column: 2;
+    margin: 0;
+    font-size: 12px;
+    line-height: 18px;
+    color: $descriptionText;
+    flex-wrap: wrap;
+    grid-row: 1;
+    grid-column: 2;
+    align-self: end;
+  }
+  &__teacher-button {
+    grid-column: 3/-1;
+    font-weight: $fw600;
+    width: 100%;
+    position: absolute;
+    bottom: 22px;
+    right: -125%;
+    transition: .3s;
+  }
+  &__button {
+    margin: 120px auto 0;
+    font-weight: $fw700;
+    font-size: 16px;
+    line-height: 19px;
+    color: $buttonColor;
+    border: 1px solid $buttonColor;
+    border-radius: 6px;
+    background: transparent;
+    &:hover {
+      color: $buttonColorText;
+      background: $buttonColor;
+    }
+    @media screen and (max-width: 620px) {
+      margin-top: 60px;
+    }
+  }
+}
+
+.main {}
+
+.button {}
+
+.button__hidden {}

@@ -1,0 +1,157 @@
+.pricing {
+  display: flex;
+  flex-direction: column;
+  &__title {
+    margin: 0 0 20px;
+    font-weight: $fw600;
+    font-size: 36px;
+    line-height: 54px;
+    color: $titleColor;
+    text-align: center;
+  }
+  &__subtitle {
+    margin: 0 0 85px;
+    font-size: 18px;
+    line-height: 27px;
+    color: $descriptionText;
+    text-align: center;
+    @media screen and (max-width: 350px) {
+      margin-bottom: 40px;
+    }
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(307px, 1fr));
+    gap: 40px;
+    @media screen and (max-width: 694px) {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    @media screen and (max-width: 350px) {
+      grid-template-columns: repeat(auto-fit, minmax(263px, 1fr));
+    }
+  }
+  &__card {
+    padding: 35px;
+    box-sizing: border-box;
+    background: $pricingCardBackgroundColor;
+    border-radius: 20px;
+    border: 3px solid $cardsBorderColor;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+  &__offer {
+    border-bottom: 1px solid $cardsBorderColor;
+    display: grid;
+    column-gap: 30px;
+    justify-content: flex-start;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+  &__icon {
+    grid-row: span 2;
+    align-self: center;
+  }
+  &__offer-title {
+    margin: 0;
+    font-weight: $fw600;
+    font-size: 18px;
+    line-height: 27px;
+    color: $titleColor;
+    grid-row: 1;
+    grid-column: 2;
+  }
+  &__costs {
+    display: flex;
+    grid-row: 2;
+    grid-column: 2;
+    align-self: end;
+  }
+  &__currency {
+    font-weight: $fw700;
+    font-size: 14px;
+    line-height: 21px;
+    color: $costColor;
+    align-self: flex-start;
+    margin-right: 2px;
+    padding-top: 7px;
+  }
+  &__cost {
+    font-weight: $fw700;
+    font-size: 28px;
+    line-height: 42px;
+    color: $costColor;
+    margin-right: 4px;
+    align-self: flex-end;
+  }
+  &__period {
+    font-weight: $fw500;
+    font-size: 11px;
+    line-height: 16px;
+    color: $titleColor;
+    padding-bottom: 7px;
+    align-self: flex-end;
+  }
+  &__lists {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex: 1 1 auto;
+  }
+  &__item {
+    line-height: 21px;
+    color: $titleColor;
+    margin-bottom: 15px;
+    position: relative;
+    &:last-of-type {
+      margin-bottom: 30px;
+    }
+    &::before {
+      content: '\2B24';
+      margin-right: 10px;
+      color: $listStylecolor;
+      font-weight: $fw700;
+    }
+    @media screen and (max-width: 350px) {
+      font-size: 12px;
+    }
+  }
+  &__button {}
+  &__button_free {
+    background: transparent;
+    color: $buttonColor;
+    opacity: 0.5;
+    border: 1px solid $buttonColor;
+    border-radius: 6px;
+    &:hover {
+      opacity: .9;
+    }
+  }
+  &__button_express {
+    background: transparent;
+    border: 1px solid $buttonColor;
+    border-radius: 6px;
+    color: $buttonColor;
+  }
+  &__button_premium {}
+  &__card-marker {
+    position: absolute;
+    right: -120px;
+    top: -140px;
+    transform: rotate(45deg);
+  }
+  &__card-marker-text {
+    position: relative;
+    top: -55px;
+    right: -135px;
+    font-weight: $fw600;
+    font-size: 12px;
+    line-height: 18px;
+    color: $titleColor;
+    z-index: 1;
+  }
+  &__card-marker-img {
+    transform: rotate(-45deg);
+  }
+}

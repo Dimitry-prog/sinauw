@@ -1,0 +1,302 @@
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  @media screen and (max-width: 620px) {
+    grid-template-columns: 1fr;
+  }
+  &__left {
+    margin: 40px 0 0;
+    position: relative;
+    @media screen and (max-width: 620px) {
+      margin: 0 0 40px;
+    }
+    @media screen and (max-width: 390px) {
+      margin: 0 0 120px;
+    }
+  }
+  &__img {}
+  &__img-main {
+    width: 691px;
+    @media screen and (max-width: 1355px) {
+      width: 592px;
+    }
+    @media screen and (max-width: 1254px) {
+      width: 532px;
+    }
+    @media screen and (max-width: 1196px) {
+      width: 471px;
+    }
+    @media screen and (max-width: 1076px) {
+      width: 100%;
+    }
+  }
+  &__lamp {
+    position: absolute;
+    left: 15%;
+    top: 25%;
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(180deg, rgba(76, 94, 157, 0.9) -32.08%, rgba(23, 24, 54, 0.9) 127.36%);
+    border-radius: 20px;
+    transform: rotate(-8.82deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 1076px) {
+      left: 10%;
+    }
+    @media screen and (max-width: 999px) {
+      left: 5%;
+      width: 60px;
+      height: 60px;
+    }
+    @media screen and (max-width: 880px) {
+      top: 5%;
+    }
+  }
+  &__img-lamp {
+    width: 60px;
+    height: 57px;
+    @media screen and (max-width: 999px) {
+      width: 40px;
+    }
+  }
+  &__book {
+    position: absolute;
+    left: 65%;
+    top: 45px;
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(180deg, rgba(76, 94, 157, 0.9) -32.08%, rgba(23, 24, 54, 0.9) 127.36%);
+    border-radius: 20px;
+    transform: rotate(12.79deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 1076px) {
+      top: 30px;
+    }
+    @media screen and (max-width: 999px) {
+      top: -5px;
+      width: 60px;
+      height: 60px;
+    }
+  }
+  &__img-book {
+    @media screen and (max-width: 999px) {
+      width: 30px;
+    }
+  }
+  &__students {
+    position: relative;
+  }
+  &__students-content {
+    max-width: 365px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(76, 94, 157, 0.8) -32.08%, rgba(23, 24, 54, 0.8) 127.36%);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    right: 90px;
+    bottom: 40px;
+    @media screen and (max-width: 1076px) {
+      bottom: -30px;
+      right: 55px;
+    }
+    @media screen and (max-width: 999px) {
+      bottom: -25px;
+      right: 40px;
+    }
+    @media screen and (max-width: 880px) {
+      max-width: 340px;
+      left: 2%;
+    }
+    @media screen and (max-width: 620px) {
+      max-width: 420px;
+      bottom: 10%;
+      left: 10%;
+    }
+    @media screen and (max-width: 525px) {
+      left: 0;
+    }
+    @media screen and (max-width: 390px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      bottom: -23%;
+      left: 1%;
+    }
+  }
+  &__students-text {
+    max-width: 110px;
+    margin: 0;
+    padding: 20px 20px 20px 0;
+    font-weight: $fw500;
+    line-height: 22px;
+    color: #BBBBC4;
+    @media screen and (max-width: 880px) {
+      padding: 15px;
+    }
+    @media screen and (max-width: 620px) {
+      padding: 10px;
+    }
+  }
+  &__students-red {
+    font-weight: $fw600;
+    line-height: 22px;
+    color: #FB5048;
+  }
+  &__right {
+    margin: 130px 0;
+    @media screen and (max-width: 1196px) {
+      margin: 90px 0;
+    }
+    @media screen and (max-width: 1076px) {
+      margin: 70px 0;
+    }
+    @media screen and (max-width: 620px) {
+      order: -1;
+      margin-top: 30px;
+    }
+    @media screen and (max-width: 350px) {
+      max-width: 263px;
+    }
+  }
+  &__title {
+    margin: 0;
+    font-weight: $fw600;
+    font-size: 56px;
+    line-height: 73px;
+    letter-spacing: -1px;
+    color: $titleColor;
+    margin-bottom: 25px;
+    @media screen and (max-width: 1076px) {
+      font-size: 50px;
+    }
+    @media screen and (max-width: 999px) {
+      font-size: 45px;
+    }
+    @media screen and (max-width: 350px) {
+      font-size: 34px;
+      line-height: 50px;
+      margin: 0 0 25px;
+    }
+  }
+  &__subtitle {
+    margin: 0;
+    font-size: 18px;
+    line-height: 27px;
+    color: $descriptionText;
+    margin-bottom: 55px;
+    @media screen and (max-width: 999px) {
+      font-size: 16px;
+    }
+  }
+  &__form {
+    @media screen and (max-width: 899px) {
+      grid-column: 1/-1;
+    }
+  }
+  &__text {
+    margin: 0 0 35px;
+    font-size: 18px;
+    line-height: 27px;
+    color: $descriptionText
+  }
+}
+
+.student {
+  &__avatars {
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 620px) {
+      padding-left: 10px;
+    }
+    @media screen and (max-width: 390px) {
+      padding-top: 10px;
+    }
+    @media screen and (max-width: 350px) {
+      padding-left: 0;
+    }
+  }
+  &__img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    @media screen and (max-width: 660px) {
+      position: static;
+    }
+  }
+  &__img-1 {
+    left: 15px;
+  }
+  &__img-2 {
+    left: 50px;
+  }
+  &__img-3 {
+    left: 85px;
+  }
+  &__img-4 {
+    left: 120px;
+  }
+  &__plus {
+    left: 155px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #8087B8;
+    border: 1px solid #6668AA;
+    border-radius: 50%;
+  }
+}
+
+.form {
+  background-color: #1F2143;
+  border-radius: 12px;
+  padding: 12px;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  &__input {
+    margin-right: 15px;
+    border: none;
+    outline: none;
+    background: none;
+    color: $titleColor;
+    &::placeholder {
+      font-size: 16px;
+      line-height: 24px;
+      color: $descriptionText;
+      @media screen and (max-width: 350px) {
+        font-size: 13px;
+      }
+    }
+    @media screen and (max-width:350px) {
+      max-width: 70%;
+    }
+  }
+  &__button {
+    background: #282B57;
+    border-radius: 6px;
+    padding: 12px;
+  }
+}
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  &__item {
+    border: 1px solid rgba(154, 156, 203, 0.6);
+    border-radius: 8px;
+    display: inline-block;
+  }
+  &__description {
+    margin: 0;
+    line-height: 21px;
+    color: rgba(154, 156, 203, 0.6);
+    padding: 8px 18px;
+  }
+}

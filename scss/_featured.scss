@@ -1,0 +1,30 @@
+.featured {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
+  column-gap: 10px;
+  row-gap: 20px;
+  &__item {
+    display: flex;
+    column-gap: 18px;
+  }
+  &__img {
+    width: 60px;
+    height: 60px;
+    align-self: flex-start;
+  }
+  &__description {}
+  &__title {
+    margin: 0;
+    font-weight: $fw600;
+    font-size: 20px;
+    line-height: 30px;
+    color: $titleColor;
+    margin-bottom: 25px;
+  }
+  &__subtitle {
+    margin: 0;
+    line-height: 24px;
+    color: $featuredTextColor;
+    max-width: 310px;
+  }
+}

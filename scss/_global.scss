@@ -1,0 +1,154 @@
+.root {
+  font-family: $ff;
+  font-style: $fsnormal;
+  font-weight: $fw400;
+  font-size: $fz14;
+  color: $titleColor;
+  background-color: $backgoundcolor;
+  &__container {
+    box-sizing: border-box;
+    max-width: $containerWidth;
+    padding: 0 120px;
+    margin: 0 auto;
+    @media screen and (max-width: 1076px) {
+      padding: 0 90px;
+    }
+    @media screen and (max-width: 880px) {
+      padding: 0;
+    }
+  }
+  &__header {
+    position: relative;
+    padding: 20px 0;
+    @media screen and (max-width: 880px) {
+      padding: 20px;
+    }
+  }
+  &__footer {
+    padding: 50px 0 30px;
+    @media screen and (max-width: 880px) {
+      padding: 30px 20px 20px;
+    }
+  }
+}
+
+.menu {
+  &__title {
+    margin: 0 0 25px 0;
+    font-weight: $fw700;
+    font-size: 20px;
+    line-height: 24px;
+    color: $titleColor;
+  }
+  &__links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+  &__item {
+    margin-right: 44px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    font-weight: $fw500;
+    line-height: 17px;
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      color: #fff;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
+}
+
+.logo {
+  position: relative;
+  background: linear-gradient(180deg, #C7CAFE 0%, #3D408F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  &__img {}
+  &__img_type_circle {
+    position: absolute;
+    left: 15px;
+    top: -1px;
+  }
+  &__img_type_logo {}
+  &__img_type_triangle {
+    position: absolute;
+    bottom: 3px;
+    right: 5px;
+  }
+}
+
+.button {
+  background-color: $buttonColor;
+  color: $buttonColorText;
+  text-decoration: none;
+  padding: 12px 32px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent;
+  font-size: 14px;
+  line-height: 17px;
+  cursor: pointer;
+  transition: .3s;
+  &:hover {
+    background: $backgoundcolor;
+    color: $buttonColor;
+    border: 1px solid $buttonColor;
+    transition: .3s;
+  }
+}
+
+.main {
+  &__hero {
+    @media screen and (max-width: 880px) {
+      padding: 0 20px;
+    }
+  }
+  &__featured {
+    padding: 0 0 120px;
+    @media screen and (max-width: 880px) {
+      padding: 0 20px 20px;
+    }
+  }
+  &__classes {
+    padding: 65px 0;
+    @media screen and (max-width: 880px) {
+      padding: 65px 20px
+    }
+    @media screen and (max-width: 620px) {
+      padding: 50px 20px
+    }
+  }
+  &__webinar {
+    padding: 110px 0 85px;
+    @media screen and (max-width: 620px) {
+      padding: 50px 0;
+    }
+  }
+  &__pricing {
+    padding: 85px 0 115px;
+    @media screen and (max-width: 880px) {
+      padding: 60px 20px 80px;
+    }
+    @media screen and (max-width: 620px) {
+      padding: 10px 20px 50px;
+    }
+  }
+  &__get {
+    margin: 60px 0 100px;
+    @media screen and (max-width: 880px) {
+      margin: 40px 20px 40px;
+    }
+  }
+}
